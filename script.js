@@ -27,6 +27,7 @@ const pageDescription = document.querySelector('meta[name="description"]');
 function getNavigationLabels(languageCode) {
   if (languageCode === 'am') return { choose: 'ቋንቋ ይምረጡ', open: 'የዳሰሳ ምናሌን ክፈት', close: 'የዳሰሳ ምናሌን ዝጋ' };
   if (languageCode === 'om') return { choose: 'Afaan filadhaa', open: 'Maqaa geejjibaa bani', close: 'Maqaa geejjibaa cufi' };
+  if (languageCode === 'so') return { choose: 'Dooro luqadda', open: 'Fur liiska hagidda', close: 'Xir liiska hagidda' };
   return { choose: 'Choose language', open: 'Open navigation menu', close: 'Close navigation menu' };
 }
 
@@ -233,6 +234,107 @@ const translations = {
       'meta[name="description"]': { content: 'Kunuunsa ogeeyyii fi gara-laafinaan yeroo jireenya keessan hundatti. Ogeessa fayyaa barbaadaa, beellama qabadhaa.' },
     },
   },
+  so: {
+    short: 'SO',
+    title: 'Xarunta Caafimaadka Aurelia — Daryeel si taxaddar leh loo bixiyo.',
+    description: 'Daryeel naxariis leh oo tayo sare leh marxalad kasta oo noloshaada ah. Raadi dhakhtar oo qabso ballan.',
+    nodes: {
+      '.announcement': ['Mar walba waan kula joognaa <span class="announcement__divider">—</span> <a href="#appointment">Qabso booqashadaada <span aria-hidden="true">↗</span></a>'],
+      '.brand__name span': ['xarunta caafimaadka'],
+      '.main-nav > a': ['Adeegyadayada', 'Dhakhaatiirtayada', 'Habkayaga', 'Nala soo xiriir', 'Qabso ballan <span aria-hidden="true">↗</span>'],
+      '.hero__eyebrow': ['<span class="eyebrow__line"></span> Daryeel caafimaad oo dadka u damqada'],
+      '.hero h1': ['Caafimaad wanaagsan.<br><span>Si qurux badan</span><br>loo daryeelay.'],
+      '.hero__copy': ['Daryeel khabiirnimo leh oo si taxaddar leh loo bixiyo. Su’aal kasta, marxalad kasta, iyo nolol maalmeedka oo dhan.'],
+      '.hero__actions .button': ['Raadi dhakhtarkaaga <span aria-hidden="true">↗</span>'],
+      '.hero__actions .text-link': ['<span class="play-icon" aria-hidden="true">↓</span> Eeg adeegyadayada'],
+      '.hero__side-note': ['<span>01 / 03</span><i></i> WAAN JOOGNAA MARKA AAD U BAAHATO'],
+      '.hero__scroll': ['<span></span> HOOS U SOO ROG SI AAD U ARAGTO'],
+      '.hero__card strong': ['Dad dhab ah. Daryeel cajiib ah.'],
+      '.hero__card div span': ['La kulan kooxda ku baranaysa.'],
+      '.hero__card > a': ['↗'],
+      '.trust-strip > p': ['CAAFIMAADKAAGA AYAAN U JOOGNAA, MA AHA DARYEELKA OO KELIYA.'],
+      '.trust-strip__stats span': ['takhasus, hal xarun', '% ayaa nagu talin lahaa', 'sano oo aan kula jirnay'],
+      '.section-heading .eyebrow': ['<span class="eyebrow__line"></span> Daryeel badan oo wanaagsan'],
+      '.section-heading h2': ['Daryeel u ah<br><span>qofka aad tahay oo dhan.</span>'],
+      '.section-heading__aside p': ['Salaantii ugu horreysay ilaa dabagalkaaga, wax walba waxay ka bilaabmaan dhegeysi. Raadi daryeelka kugu habboon marxalad kasta oo noloshaada ah.'],
+      '.section-heading__aside .text-link': ['Eeg dhammaan adeegyadayada <span aria-hidden="true">↗</span>'],
+      '.specialty-card h3': ['Wadnaha iyo<br>caafimaadka wadnaha', 'Daryeelka<br>aasaasiga ah', 'Caafimaadka<br>haweenka', 'Caafimaadka<br>lafaha iyo kala-goysyada', 'Caafimaadka<br>carruurta'],
+      '.specialty-card__link': ['↗', '↗', '↗', '↗', '↗'],
+      '.care-bottom > span:first-child': ['Ma hubtid meel aad ka bilowdo?'],
+      '.care-bottom .text-link': ['Waan ku farxi lahayn inaan ku caawinno <span aria-hidden="true">↗</span>'],
+      '.care-bottom__all': ['+ 19 takhasus oo dheeraad ah'],
+      '.doctors-intro .eyebrow': ['<span class="eyebrow__line"></span> Dadka ayaa wax walba ka horreeya.'],
+      '.doctors-intro h2': ['La kulan<br>dhakhaatiirtaada.'],
+      '.doctors-intro__copy': ['Dhakhtarka kugu habboon wax walba wuu beddeli karaa. La kulan xirfadlayaal naxariis leh oo ku arka adiga, kana badan taariikhdaada caafimaad.'],
+      '.doctors-intro > .button': ['Eeg dhammaan dhakhaatiirtayada <span aria-hidden="true">↗</span>'],
+      '.doctor-profile-hint': ['Khibrad iyo xirfado <span>＋</span>', 'Khibrad iyo xirfado <span>＋</span>', 'Khibrad iyo xirfado <span>＋</span>', 'Khibrad iyo xirfado <span>＋</span>'],
+      '.doctor-card__badge': ['DHUANUUNAYAASHU JECEL YIHIIN'],
+      '.doctor-profile-years > span': ['SANO OO KHIBRAD AH'],
+      '.doctor-profile-panel h4': ['Takhasusyada'],
+      '.doctor-profile-panel li': ['Daryeelka ka-hortagga cudurrada wadnaha', 'Qiimaynta caafimaadka wadnaha', 'Daryeelka dhiig-karka', 'Baaritaanka caafimaadka sannadlaha ah', 'Ka-hortagga cudurrada', 'Daryeelka cudurrada daba-dheeraada', 'Caafimaadka haweenka', 'Baaritaannada ka-hortagga', 'Caafimaadka taranka', 'Caafimaadka kala-goysyada', 'Dhaawacyada ciyaaraha', 'Dhaqdhaqaaqa iyo soo kabashada'],
+      '.doctor-card__info p': ['Caafimaadka wadnaha <span>·</span> 14 sano oo khibrad ah', 'Daryeelka aasaasiga ah <span>·</span> 11 sano oo khibrad ah', 'Caafimaadka haweenka <span>·</span> 9 sano oo khibrad ah', 'Caafimaadka lafaha <span>·</span> 12 sano oo khibrad ah'],
+      '.appointment-photo__caption span:first-child': ['Daryeel kula dareensiinaya in lagu fahmay.'],
+      '.appointment-photo__caption span:last-child': ['— BALLANQAADKA AURELIA'],
+      '.appointment-content .eyebrow': ['<span class="eyebrow__line"></span> Tallaabada koowaad way fududahay'],
+      '.appointment-content h2': ['Aan kuu<br><span>helno waqti.</span>'],
+      '.appointment-content__copy': ['Wax yar nooga sheeg waxa aad u baahan tahay. Kooxdayadu waxay kuu heli doontaa khabiirka iyo waqtiga kugu habboon.'],
+      '.booking-form label > span': ['Magaca oo buuxa', 'Cinwaanka iimaylka', 'Lambarka taleefanka', 'Adeegga aad u baahan tahay', 'Taariikhda aad doorbidayso'],
+      '.booking-form select option': ['Dooro takhasus', 'Daryeelka aasaasiga ah', 'Caafimaadka wadnaha', 'Caafimaadka haweenka', 'Caafimaadka lafaha', 'Caafimaadka carruurta', 'Kale / Ma hubo'],
+      '.booking-submit': ['Codso ballan <span aria-hidden="true">↗</span>'],
+      '.form-note': ['Kadib markaad dirto foomka, dooro WhatsApp ama Telegram si aad codsigaaga u dirto.'],
+      '.form-message': [''],
+      '.quote-section blockquote': ['Sannado badan ka dib, markii ugu horreysay dhakhtarkaygu runtii <em>wuu i arkay.</em> Taasi wax walba way beddeshay.', 'Qof kastaa waqti ayuu ii siiyay si uu su’aalahayga u dhegeysto. <em>Waa la i dhegeystay, waa la i daryeelay</em>, rajo ayaana la i siiyay.', 'Ballan-qabsiga ilaa dabagalka, daryeelku wuxuu ahaa mid shaqsiyeed. Ugu dambayn waxaan helay koox <em>aan ku kalsoonahay.</em>'],
+      '.quote-attribution > div span': ['Bukaan Aurelia ah tan iyo 2021', 'Bukaan Aurelia ah tan iyo 2022', 'Bukaan Aurelia ah tan iyo 2023'],
+      '.location-content .eyebrow': ['<span class="eyebrow__line"></span> Waxaan joognaa xaafaddaada'],
+      '.location-content h2': ['Way fududahay in nala helo.<br><span>Waxay kuu dareemaysaa guri.</span>'],
+      '.location-copy': ['Meel deggan oo soo dhoweyn leh oo ku taal bartamaha Seattle. Sida aad tahay ku imow; inta kale waan kaa caawinaynaa.'],
+      '.location-details strong': ['Nala soo xiriir', 'Saacadaha shaqada'],
+      '.location-details p span': ['1200 5th Avenue, Seattle, WA 98101', 'Isniin–Jimce, 8–18 · Sabti, 9–14'],
+      '.location-content > .text-link': ['Hel tilmaamaha jidka <span aria-hidden="true">↗</span>'],
+      '.map-tag strong': ['Xarunta Caafimaadka Aurelia'],
+      '.map-tag small': ['Bartamaha Seattle · Hel tilmaamaha ↗'],
+      '.closing-cta .eyebrow': ['<span class="eyebrow__line"></span> Caafimaadkaaga. Xawaarahaaga.'],
+      '.closing-cta h2': ['Markaad diyaar noqoto,<br><em>waan joognaa.</em>'],
+      '.closing-cta .button': ['Aan bilowno <span aria-hidden="true">↗</span>'],
+      '.footer-brand-block > p': ['Daryeelka wanaagsan waa dareen.<br>Aan kaa caawinno inaad hesho.'],
+      '.footer-links > div > strong': ['Adeegyadayada', 'Nala soo xiriir', 'Nala soo booqo'],
+      '.footer-links > div:first-child a': ['Dhammaan takhasusyada', 'La kulan dhakhaatiirtayada', 'Qabso ballan'],
+      '.footer-address > span': ['Hel tilmaamaha jidka ↗'],
+      '.footer-hours': ['Isniin–Jimce, 8–18<br>Sabti, 9–14'],
+      '.footer-bottom > span:first-child': ['© 2026 Xarunta Caafimaadka Aurelia. Had iyo jeer, si taxaddar leh.'],
+      '.footer-bottom > span:nth-child(2)': ['Si kalgacal leh ayaa loogu sameeyay Seattle, WA'],
+      '.footer-bottom > a': ['Asturnaanta iyo helitaankeeda'],
+    },
+    attributes: {
+      '.site-header > .brand': { 'aria-label': 'Bogga hore ee Xarunta Caafimaadka Aurelia' },
+      '.menu-toggle': { 'aria-label': 'Fur liiska hagidda' },
+      '.main-nav': { 'aria-label': 'Hagidda ugu weyn' },
+      '.hero__image': { 'aria-label': 'Qol daaweyn oo iftiin leh oo soo dhoweynaya' },
+      '.hero__scroll': { 'aria-label': 'Hoos u rog si aad u ogaato' },
+      '.hero__card > a': { 'aria-label': 'La kulan dhakhaatiirtayada' },
+      '.trust-strip': { 'aria-label': 'Aurelia oo kooban' },
+      '.specialty-card__link': { 'aria-label': ['Eeg caafimaadka wadnaha', 'Eeg daryeelka aasaasiga ah', 'Eeg caafimaadka haweenka', 'Eeg caafimaadka lafaha', 'Eeg caafimaadka carruurta'] },
+      '.doctor-prev': { 'aria-label': 'Dhakhaatiirtii hore' },
+      '.doctor-next': { 'aria-label': 'Dhakhaatiirta xigta' },
+      '.doctor-profile-toggle': { 'aria-label': ['Eeg khibradda iyo xirfadaha Dr. Maya Bennett', 'Eeg khibradda iyo xirfadaha Dr. James Carter', 'Eeg khibradda iyo xirfadaha Dr. Sofia Reynolds', 'Eeg khibradda iyo xirfadaha Dr. Noah Williams'] },
+      '.doctor-card__arrow': { 'aria-label': ['Qabso ballan Dr. Maya Bennett', 'Qabso ballan Dr. James Carter', 'Qabso ballan Dr. Sofia Reynolds', 'Qabso ballan Dr. Noah Williams'] },
+      '.booking-form input[name="name"]': { placeholder: 'Tusaale: Alex Morgan' },
+      '.booking-form input[name="email"]': { placeholder: 'you@example.com' },
+      '.booking-form input[name="phone"]': { placeholder: 'Tusaale: 0911 234 567', title: 'Geli lambar taleefan oo sax ah oo leh 7 ilaa 15 lambar.' },
+      '.quote-section': { 'aria-label': 'Sheekooyinka bukaannada' },
+      '.quote-list': { 'aria-label': 'U jiid si aad u akhrido sheekooyin bukaan oo dheeraad ah' },
+      '.quote-card': { 'aria-label': ['Sheekada bukaanka 1 ee 3', 'Sheekada bukaanka 2 ee 3', 'Sheekada bukaanka 3 ee 3'] },
+      '.quote-prev': { 'aria-label': 'Sheekooyinkii bukaanka ee hore' },
+      '.quote-next': { 'aria-label': 'Sheekooyinka bukaanka ee xiga' },
+      '.quote-controls .quote-prev': { 'aria-label': 'Sheekooyinkii bukaanka ee hore' },
+      '.quote-controls .quote-next': { 'aria-label': 'Sheekooyinka bukaanka ee xiga' },
+      '.location-section': { 'aria-label': 'Goobtayada iyo cinwaankayaga' },
+      '.map-frame iframe': { title: 'Khariidadda Xarunta Caafimaadka Aurelia ee bartamaha Seattle' },
+      '.appointment-photo img': { alt: 'Daryeele ayaa si naxariis leh u haya gacmaha bukaanka' },
+      '.brand--footer': { 'aria-label': 'Bogga hore ee Xarunta Caafimaadka Aurelia' },
+      'meta[name="description"]': { content: 'Daryeel naxariis leh oo tayo sare leh marxalad kasta oo noloshaada ah. Raadi dhakhtar oo qabso ballan.' },
+    },
+  },
 };
 
 const originalContent = new Map();
@@ -298,8 +400,8 @@ function applyLanguage(languageCode) {
   document.querySelectorAll('.doctor-profile-toggle').forEach((toggle) => {
     const name = toggle.closest('.doctor-card').querySelector('h3').textContent;
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    const action = languageCode === 'am' ? (isOpen ? 'ደብቅ' : 'አሳይ') : languageCode === 'om' ? (isOpen ? 'Dhoksaa' : 'Agarsiisi') : (isOpen ? 'Hide' : 'Show');
-    const details = languageCode === 'am' ? 'ልምድ እና ችሎታ' : languageCode === 'om' ? 'Muuxannoo fi dandeettii' : 'experience and skills';
+    const action = languageCode === 'am' ? (isOpen ? 'ደብቅ' : 'አሳይ') : languageCode === 'om' ? (isOpen ? 'Dhoksaa' : 'Agarsiisi') : languageCode === 'so' ? (isOpen ? 'Qari' : 'Muuji') : (isOpen ? 'Hide' : 'Show');
+    const details = languageCode === 'am' ? 'ልምድ እና ችሎታ' : languageCode === 'om' ? 'Muuxannoo fi dandeettii' : languageCode === 'so' ? 'khibrad iyo xirfado' : 'experience and skills';
     toggle.setAttribute('aria-label', `${action} ${name} ${details}`);
   });
   document.querySelector('#booking-form').setAttribute('lang', languageCode);
@@ -341,7 +443,7 @@ document.addEventListener('keydown', (event) => {
 
 try {
   const savedLanguage = localStorage.getItem('aurelia-language');
-  if (savedLanguage === 'am' || savedLanguage === 'om') applyLanguage(savedLanguage);
+  if (savedLanguage === 'am' || savedLanguage === 'om' || savedLanguage === 'so') applyLanguage(savedLanguage);
 } catch (error) {
   console.warn('Could not restore the saved language preference.', error);
 }
@@ -364,7 +466,9 @@ const validatePhone = () => {
     ? 'ትክክለኛ የስልክ ቁጥር ከ7 እስከ 15 አሃዞች ያስገቡ።'
     : document.documentElement.lang === 'om'
       ? 'Lakkoofsa bilbilaa sirrii digitii 7 hanga 15 qabu galchaa.'
-      : 'Enter a valid phone number with 7 to 15 digits.';
+      : document.documentElement.lang === 'so'
+        ? 'Geli lambar taleefan oo sax ah oo leh 7 ilaa 15 lambar.'
+        : 'Enter a valid phone number with 7 to 15 digits.';
 
   phoneInput.setCustomValidity(
     phone && (!validCharacters || digitCount < 7 || digitCount > 15)
@@ -396,8 +500,8 @@ document.querySelectorAll('.doctor-profile-toggle').forEach((toggle) => {
       if (openToggle === toggle) return;
       openToggle.setAttribute('aria-expanded', 'false');
       const languageCode = document.documentElement.lang;
-      const action = languageCode === 'am' ? 'አሳይ' : languageCode === 'om' ? 'Agarsiisi' : 'Show';
-      const details = languageCode === 'am' ? 'ልምድ እና ችሎታ' : languageCode === 'om' ? 'Muuxannoo fi dandeettii' : "experience and skills";
+      const action = languageCode === 'am' ? 'አሳይ' : languageCode === 'om' ? 'Agarsiisi' : languageCode === 'so' ? 'Muuji' : 'Show';
+      const details = languageCode === 'am' ? 'ልምድ እና ችሎታ' : languageCode === 'om' ? 'Muuxannoo fi dandeettii' : languageCode === 'so' ? 'khibrad iyo xirfado' : "experience and skills";
       openToggle.setAttribute('aria-label', `${action} ${openToggle.closest('.doctor-card').querySelector('h3').textContent} ${details}`);
       openToggle.querySelector('.doctor-profile-hint span').textContent = '＋';
       openToggle.closest('.doctor-card__photo').classList.remove('is-profile-open');
@@ -408,8 +512,8 @@ document.querySelectorAll('.doctor-profile-toggle').forEach((toggle) => {
     const profile = document.getElementById(toggle.getAttribute('aria-controls'));
     toggle.setAttribute('aria-expanded', String(!isOpen));
     const languageCode = document.documentElement.lang;
-    const action = languageCode === 'am' ? (isOpen ? 'አሳይ' : 'ደብቅ') : languageCode === 'om' ? (isOpen ? 'Agarsiisi' : 'Dhoksaa') : (isOpen ? 'Show' : 'Hide');
-    const details = languageCode === 'am' ? 'ልምድ እና ችሎታ' : languageCode === 'om' ? 'Muuxannoo fi dandeettii' : "experience and skills";
+    const action = languageCode === 'am' ? (isOpen ? 'አሳይ' : 'ደብቅ') : languageCode === 'om' ? (isOpen ? 'Agarsiisi' : 'Dhoksaa') : languageCode === 'so' ? (isOpen ? 'Muuji' : 'Qari') : (isOpen ? 'Show' : 'Hide');
+    const details = languageCode === 'am' ? 'ልምድ እና ችሎታ' : languageCode === 'om' ? 'Muuxannoo fi dandeettii' : languageCode === 'so' ? 'khibrad iyo xirfado' : "experience and skills";
     toggle.setAttribute('aria-label', `${action} ${doctorName} ${details}`);
     toggle.querySelector('.doctor-profile-hint span').textContent = isOpen ? '＋' : '−';
     photo.classList.toggle('is-profile-open', !isOpen);
@@ -522,7 +626,9 @@ bookingForm.addEventListener('submit', (event) => {
     ? ['የቀጠሮ ጥያቄ — አውሬሊያ የሕክምና ማዕከል', 'ስም', 'ስልክ', 'ኢሜይል', 'አገልግሎት', 'የሚመርጡት ቀን']
     : languageCode === 'om'
       ? ['Gaaffii beellamaa — Giddugala Yaalaa Aurelia', 'Maqaa', 'Bilbila', 'Imeelii', 'Tajaajila', 'Guyyaa filatame']
-      : ['Appointment request — Aurelia Medical Center', 'Name', 'Phone', 'Email', 'Specialty', 'Preferred date'];
+      : languageCode === 'so'
+        ? ['Codsiga ballanta — Xarunta Caafimaadka Aurelia', 'Magaca', 'Taleefanka', 'Iimaylka', 'Takhasuska', 'Taariikhda la doorbidayo']
+        : ['Appointment request — Aurelia Medical Center', 'Name', 'Phone', 'Email', 'Specialty', 'Preferred date'];
   const whatsappText = [
     fieldLabels[0],
     `${fieldLabels[1]}: ${name}`,
@@ -541,7 +647,9 @@ bookingForm.addEventListener('submit', (event) => {
     ? `እናመሰግናለን፣ ${name}። የቀጠሮ ጥያቄዎን ለመመልከት WhatsApp ወይም Telegram ይምረጡ። በቻቱ ውስጥ ዝግጁ ይሆናል፤ ለመላክ Send ይጫኑ።`
     : languageCode === 'om'
       ? `Galatoomaa, ${name}. Gaaffii beellama keessan ilaaluuf WhatsApp ykn Telegram filadhaa. Ergaa erguuf chaatii keessatti Send tuqaa.`
-      : `Thanks, ${name}. Choose WhatsApp or Telegram to review your appointment request. The details will be ready in the chat; tap Send there to submit your request.`;
+      : languageCode === 'so'
+        ? `Waad mahadsan tahay, ${name}. Dooro WhatsApp ama Telegram si aad u eegto codsiga ballantaada. Faahfaahinta waxay diyaar ku ahaan doontaa sheekaysiga; halkaas ka taabo Send si aad u dirto codsigaaga.`
+        : `Thanks, ${name}. Choose WhatsApp or Telegram to review your appointment request. The details will be ready in the chat; tap Send there to submit your request.`;
   message.classList.add('is-visible');
   form.querySelector('.booking-submit').setAttribute('aria-describedby', 'form-message');
 });
